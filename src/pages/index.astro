@@ -1,0 +1,43 @@
+---
+import HeroComponent from "../components/index/eye/hero";
+import HeroText from "../components/index/heroText/heroText";
+import SecondSection from "../components/index/secondSection/secondSection"
+import StackComponent from "../components/index/stack/stack";
+import ProjectsOverview from "../components/index/projectsOverview/overview";
+import ContactSection from "../components/index/contactSection/contact";
+import "./index.scss";
+import HeaderComponent from "../components/header/header";
+import FooterComponent from "../components/footer/footer"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<HeaderComponent />
+		<HeroComponent client:load />
+		<HeroText />
+		<SecondSection client:load/>
+		<StackComponent />
+		<ProjectsOverview />
+		<ContactSection client:load />
+		<FooterComponent />
+	</body>
+</html>
+
+<style>
+	html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0b0b0b;
+  }
+</style>

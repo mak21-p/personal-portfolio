@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "Aroly";
+  src: url("/Aroly.ttf");
+}
+@import "./shared.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  font-family: "Aroly";
+  margin: 0;
+}
+
+p,
+a {
+  color: #fff;
+  font-family: "Consolas";
+  margin: 0;
+  text-decoration: none;
+}
+
+.heroTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
+
+  h1 {
+    margin-top: 20px;
+    font-size: 52px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: "Consolas" !important;
+    color: #646363;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  svg {
+    margin-top: 100px;
+    height: 20px;
+    animation: glower 1.5s infinite;
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  min-height: 100vh;
+
+  .dark {
+    background: #000;
+  }
+
+  .textSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2,
+    p {
+      margin-top: 20px;
+      padding: 0 50px;
+    }
+  }
+
+  .section {
+    min-width: 50%;
+
+    h2 {
+      font-size: $headingSize;
+    }
+
+    p {
+      font-size: $paraSize;
+    }
+  }
+}
+
+.stackWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  .stackRow:hover {
+    .feature {
+      opacity: 1;
+      filter: none;
+    }
+
+    .cat {
+      box-shadow: 0px 0px 20px #ffffff24;
+    }
+  }
+
+  .stackRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px 50px;
+
+    .cat {
+      color: #fff;
+      padding: 10px 10px 5px 10px;
+      border: 1px solid #ffffff24;
+      background: #0b0b0b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      transition: 500ms ease;
+
+      h2 {
+        font-size: 36px;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .feature {
+      border: 1px solid #ffffff24;
+      color: #fff;
+      background: #0b0b0b;
+      padding: 10px;
+      border-radius: 10px;
+      opacity: 0;
+      transition: 500ms ease;
+      box-shadow: 0px 0px 20px #ffffff24;
+      text-align: center;
+      min-width: 60px;
+      filter: blur(5px);
+
+      svg {
+        height: 35px;
+        fill: #fff;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.overviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+  align-items: center;
+
+  button {
+    background: #000;
+    border: 1px solid #ffffff24;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: 300ms ease;
+
+    &:hover {
+      box-shadow: 0px 2px 20px #ffffff24;
+    }
+  }
+
+  .projectOv {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #ffffff24;
+    width: 350px;
+    box-shadow: 0px 0px 30px #ffffff24;
+    background: #0b0b0b;
+
+    h3,
+    h4,
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    img {
+      object-fit: contain;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    h4 {
+      font-family: "Consolas";
+      font-weight: bold;
+      color: #646363;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.socialsWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+
+  .social {
+    border: 1px solid #ffffff24;
+    color: #fff;
+    background: #0b0b0b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 500ms ease;
+    text-align: center;
+    min-width: 75px;
+
+    svg {
+      height: 35px;
+      fill: #fff;
+    }
+
+    p {
+      font-size: 16px;
+      padding: 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 20px #ffffff24;
+    }
+  }
+}
+
+@keyframes glower {
+  0% {
+    filter: drop-shadow(0px 0px 30px #fff);
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 0px #fff);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 30px #fff);
+  }
+}

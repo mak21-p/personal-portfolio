@@ -1,0 +1,35 @@
+body,
+html {
+  cursor: url("/cursor.svg"), auto;
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  cursor: url("/cursorpointer.svg") 15 0, auto;
+}
+
+$headingSize: 36px;
+$paraSize: 18px;
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #85848424;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
