@@ -19,7 +19,7 @@ const ContactSection = () => {
               <p>LinkedIn</p>
             </div>
           </a>
-          <a>
+          <a href="mailto:maqsood@maqsood.dev">
             <div className="social">
               <FontAwesomeIcon icon={faEnvelope} />
               <p>Email</p>
