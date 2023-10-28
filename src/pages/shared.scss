@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Aroly";
-  src: url("/Aroly.ttf");
+  src: local("Poppins"), url("/Aroly.ttf");
+  font-display: swap;
 }
 
 body,
