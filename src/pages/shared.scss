@@ -4,6 +4,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Consolas";
+  src: local("Poppins"), local("Consolas"), url("/consolas.ttf");
+  font-display: swap;
+}
+
 body,
 html {
   cursor: url("/cursor.svg"), auto;
