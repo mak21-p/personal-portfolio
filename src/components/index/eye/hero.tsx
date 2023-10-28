@@ -9,7 +9,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 
 const HeroComponent = () => {
   return (
-    <Canvas style={{ height: "300px" }}>
+    <Canvas style={{ height: "250px" }}>
       <Suspense fallback={null}>
         <Model />
       </Suspense>

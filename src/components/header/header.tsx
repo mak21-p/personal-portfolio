@@ -1,10 +1,14 @@
 import "./header.scss";
+import { client } from "../../sanity";
+import { useState } from "react";
+import { z } from "zod";
+import type { Result, Welcome } from "../../types/post.types";
 
 const HeaderComponent = () => {
-  return (
+    return (
     <div className="header">
       <h1>M</h1>
-      <p>TBD</p>
+      <a href="/projects">Projects</a>
     </div>
   );
 };

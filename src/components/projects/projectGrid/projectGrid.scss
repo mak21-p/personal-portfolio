@@ -1,0 +1,58 @@
+.projectsWrapper {
+  h1 {
+    text-align: center;
+    margin: 100px 0px;
+    font-size: 44px;
+  }
+
+  margin: 100px 0;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 200px;
+
+  .projectOv {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #ffffff24;
+    width: 350px;
+    background: #0b0b0b;
+    transition: 300ms ease;
+
+    &:hover {
+      box-shadow: 0px 0px 30px #ffffff24;
+    }
+
+    h3,
+    h4,
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    img {
+      object-fit: contain;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    h4 {
+      font-family: "Consolas";
+      font-weight: bold;
+      color: #646363;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

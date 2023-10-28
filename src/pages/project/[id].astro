@@ -1,0 +1,77 @@
+---
+import type { GetStaticPaths } from "astro";
+import "../shared.scss"
+import { client } from "../../sanity";
+import type { Result } from "../../types/post.types";
+import imageUrlBuilder from "@sanity/image-url"
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import "./singleProject.scss";
+import {marked} from "marked";
+import HeaderComponent from "../../components/header/header";
+import FooterComponent from "../../components/footer/footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBackspace, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
+type pathType = {
+	params: {
+		id: string
+	}
+}
+
+export const builder = imageUrlBuilder(client);
+
+function urlFor(source: SanityImageSource) {
+    return builder.image(source);
+}
+
+
+export async function getProjects() {
+	 const data = (await client.fetch(`*[_type == "post"]`)) as Result[];
+	 return data;
+}
+
+export const data = await getProjects();
+export const getStaticPaths = (async () => {
+	
+	return data.flatMap((d) => ({params: {id: d._id}}));
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+const thisPost: Result | undefined = data.find((d) => d._id == id);
+
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<HeaderComponent />
+		<div class="backButton">
+		<a href="/projects"><button><FontAwesomeIcon icon={faChevronLeft} /> Projects</button></a>
+		</div>
+        <div class="projectWrapper">
+			<img src={urlFor(thisPost?.featured_image.asset!).url()} />
+			<h1>{thisPost?.title}</h1>
+			<h2>{thisPost?.Category}</h2>
+			<article set:html={marked.parse(thisPost?.content!)} />
+		</div>
+		<FooterComponent />
+	</body>
+</html>
+
+<style>
+	html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0b0b0b;
+  }
+</style>

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Aroly";
+  src: url("/Aroly.ttf");
+}
+
 body,
 html {
   cursor: url("/cursor.svg"), auto;
@@ -5,8 +10,28 @@ html {
 }
 
 a,
-button {
+button,
+.pointer {
   cursor: url("/cursorpointer.svg") 15 0, auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  font-family: "Aroly";
+  margin: 0;
+}
+
+p,
+a,
+ul,
+li {
+  color: #fff;
+  font-family: "Consolas";
+  margin: 0;
+  text-decoration: none;
 }
 
 $headingSize: 36px;

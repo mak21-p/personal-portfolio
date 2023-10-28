@@ -52,30 +52,30 @@ const Databases = () => {
             stroke="white"
             stroke-width="1.79"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             fill="transparent"
           />
           <path
             d="M51.0627 37.9251C51.0627 37.9251 51.5627 40.3751 58.8127 38.8801C61.9802 38.2251 60.0727 40.7151 56.8627 42.2051C54.2277 43.4301 48.3177 43.7426 48.2202 42.0551C47.9702 37.6926 51.3302 39.0176 51.0877 37.9251C50.8677 36.9401 49.3627 35.9751 48.3727 33.5651C47.5052 31.4651 36.4727 15.3401 51.4327 17.7326C51.9827 17.6201 47.5327 3.48255 33.5327 3.27755C19.5327 3.07255 19.9752 20.4901 19.9752 20.4901"
             stroke="white"
-            stroke-width="1.79"
+            strokeWidth="1.79"
             stroke-linecap="round"
-            stroke-linejoin="bevel"
+            strokeLinejoin="bevel"
             fill="transparent"
           />
           <path
             d="M28.1176 39.42C26.1676 41.6 26.7426 41.9825 22.8426 42.785C18.8976 43.5975 21.2176 45.045 22.7276 45.425C24.5626 45.885 28.8076 46.535 31.6776 42.5175C32.5526 41.2925 31.6726 39.3425 30.4726 38.8475C29.8926 38.6075 29.1176 38.3075 28.1226 39.4225L28.1176 39.42Z"
             stroke="white"
-            stroke-width="1.79"
-            stroke-linejoin="round"
+            strokeWidth="1.79"
+            strokeLinejoin="round"
             fill="transparent"
           />
           <path
             d="M27.9903 39.3825C27.7903 38.1 28.4103 36.5775 29.0728 34.7925C30.0678 32.1175 32.3628 29.4425 30.5278 20.95C29.1603 14.625 19.9778 19.6325 19.9778 20.49C19.9778 21.3475 20.3928 24.84 19.8278 28.9025C19.0853 34.2075 23.2028 38.6925 27.9428 38.235"
             stroke="white"
-            stroke-width="1.79"
+            strokeWidth="1.79"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             fill="transparent"
           />
           <path

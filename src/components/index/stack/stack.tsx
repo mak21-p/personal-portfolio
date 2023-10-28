@@ -4,7 +4,7 @@ import Databases from "./databases";
 
 const StackComponent = () => {
   return (
-    <div className="sectionWrapper">
+    <div className="sectionWrapper reverseMobile">
       <div className="section dark stackWrapper">
         <Frontend />
         <Backend />

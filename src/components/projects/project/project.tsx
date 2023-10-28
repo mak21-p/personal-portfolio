@@ -6,10 +6,10 @@ type overviewProps = {
   id: string;
 };
 
-function ProjectOv(props: overviewProps) {
+function Project(props: overviewProps) {
   return (
-    <a href={`/project/` + props.id}>
-      <div className="projectOv">
+    <a href={"project/" + props.id}>
+      <div className="projectOv pointer">
         <img src={props.imgPath} />
         <h3>{props.heading}</h3>
         <h4>{props.category}</h4>
@@ -19,4 +19,4 @@ function ProjectOv(props: overviewProps) {
   );
 }
 
-export default ProjectOv;
+export default Project;

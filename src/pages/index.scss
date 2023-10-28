@@ -1,26 +1,4 @@
-@font-face {
-  font-family: "Aroly";
-  src: url("/Aroly.ttf");
-}
 @import "./shared.scss";
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #fff;
-  font-family: "Aroly";
-  margin: 0;
-}
-
-p,
-a {
-  color: #fff;
-  font-family: "Consolas";
-  margin: 0;
-  text-decoration: none;
-}
 
 .heroTextWrapper {
   display: flex;
@@ -95,7 +73,6 @@ a {
 
   .stackRow:hover {
     .feature {
-      opacity: 1;
       filter: none;
     }
 
@@ -134,12 +111,11 @@ a {
       background: #0b0b0b;
       padding: 10px;
       border-radius: 10px;
-      opacity: 0;
       transition: 500ms ease;
       box-shadow: 0px 0px 20px #ffffff24;
       text-align: center;
       min-width: 60px;
-      filter: blur(5px);
+      filter: blur(5px) brightness(20%);
 
       svg {
         height: 35px;
@@ -257,5 +233,63 @@ a {
 
   100% {
     filter: drop-shadow(0px 0px 30px #fff);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heroTextWrapper {
+    text-align: center;
+    margin-bottom: 100px;
+
+    svg {
+      margin-top: 50px;
+    }
+  }
+
+  .sectionWrapper {
+    flex-direction: column;
+    min-height: 300px;
+
+    .textSection {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      gap: 10px;
+      text-align: center;
+
+      h2,
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .reverseMobile {
+    flex-direction: column-reverse;
+  }
+
+  .stackWrapper {
+    padding: 50px 0;
+
+    .stackRow {
+      align-items: center;
+      justify-content: center;
+
+      .feature {
+        filter: none;
+      }
+    }
+  }
+
+  .overviewWrapper {
+    width: 100%;
+    justify-content: center;
+
+    a {
+      width: 75%;
+    }
+
+    .projectOv {
+      width: 100%;
+    }
   }
 }

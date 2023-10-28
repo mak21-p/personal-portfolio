@@ -5,7 +5,7 @@ import EnvelopeComponent from "./envelope/envelopeCanvas";
 
 const ContactSection = () => {
   return (
-    <div className="sectionWrapper">
+    <div className="sectionWrapper reverseMobile">
       <div className="section dark">
         <EnvelopeComponent />
       </div>
