@@ -31,14 +31,14 @@ const projects = (await sanityClient.fetch(`*[_type == "post"]`)) as Result[];
         id={projects[0]._id}
       />
       <ProjectOv
-        imgPath="/chambers32.webp"
-        heading="Chambers 32"
-        excerpt="Elegant and Formal web design."
-        category="Wordpress"
-        id=""
+        imgPath={urlFor(projects[1].featured_image.asset).url()}
+        heading={projects[1].title}
+        excerpt={projects[1].Excerpt}
+        category={projects[1].Category}
+        id={projects[1]._id}
       />
       <button>
-        <a>View All</a>
+        <a href="/projects">View All</a>
       </button>
     </div>
   </div>
