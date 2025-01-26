@@ -1,39 +1,46 @@
 ---
 import HeroComponent from "../components/index/eye/hero";
 import HeroText from "../components/index/heroText/heroText";
-import SecondSection from "../components/index/secondSection/secondSection"
+import SecondSection from "../components/index/secondSection/secondSection";
 import StackComponent from "../components/index/stack/stack";
 import ProjectsOverview from "../components/index/projectsOverview/overview.astro";
 import ContactSection from "../components/index/contactSection/contact";
 import "./index.scss";
 import HeaderComponent from "../components/header/header";
-import FooterComponent from "../components/footer/footer.astro"
+import FooterComponent from "../components/footer/footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<title>Maqsood Ali Khan</title>
-		<meta name="viewport" content="width=device-width, initial-scale = 1.0, 
-		maximum-scale=1.0, user-scalable=no" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Maqsood Ali Khan</title>
-	</head>
-	<body>
-		<HeaderComponent />
-		<HeroComponent client:load />
-		<HeroText />
-		<SecondSection client:load/>
-		<StackComponent />
-		<ProjectsOverview />
-		<ContactSection client:load />
-		<FooterComponent />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <title>Maqsood Ali Khan</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1.0, 
+		maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="I'm Maqsood Ali Khan, a skilled full-stack web developer specializing in modern technologies like NodeJS, React, Angular, ElectronJS and more. Explore my portfolio to see innovative projects and solutions tailored for the web and beyond."
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Maqsood Ali Khan</title>
+  </head>
+  <body>
+    <HeaderComponent />
+    <HeroComponent client:load />
+    <HeroText />
+    <SecondSection client:load />
+    <StackComponent />
+    <ProjectsOverview />
+    <ContactSection client:load />
+    <FooterComponent />
+  </body>
 </html>
 
 <style>
-	html,
+  html,
   body,
   #root {
     width: 100%;
