@@ -8,3 +8,19 @@
     color: #bfbfbf;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}

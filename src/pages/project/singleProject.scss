@@ -85,3 +85,18 @@
     gap: 20px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .projectWrapper {
+    text-align: center;
+    padding: 50px 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .backButton {
+    padding-left: 20px;
+  }
+}
