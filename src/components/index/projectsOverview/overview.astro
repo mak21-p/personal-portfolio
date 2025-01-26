@@ -1,0 +1,45 @@
+---
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { sanityClient } from "sanity:client";
+import type { Result } from "../../../types/post.types";
+import ProjectOv from "./projectOv.astro";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source: SanityImageSource) {
+  return builder.image(source);
+}
+
+const projects = (await sanityClient.fetch(`*[_type == "post"]`)) as Result[];
+---
+
+<div class="sectionWrapper">
+  <div class="section textSection">
+    <h2>Projects</h2>
+    <p>
+      Making use of all of my skills, I aim to bring the best possible product
+      to my clientele.
+    </p>
+  </div>
+  <div class="section dark">
+    <div class="overviewWrapper">
+      <ProjectOv
+        imgPath={urlFor(projects[0].featured_image.asset).url()}
+        heading={projects[0].title}
+        excerpt={projects[0].Excerpt}
+        category={projects[0].Category}
+        id={projects[0]._id}
+      />
+      <ProjectOv
+        imgPath="/chambers32.webp"
+        heading="Chambers 32"
+        excerpt="Elegant and Formal web design."
+        category="Wordpress"
+        id=""
+      />
+      <button>
+        <a>View All</a>
+      </button>
+    </div>
+  </div>
+</div>

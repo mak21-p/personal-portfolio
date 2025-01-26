@@ -1,0 +1,21 @@
+---
+/* @jsxImportSource astro */
+interface Props {
+  imgPath: string;
+  heading: string;
+  category: string;
+  excerpt: string;
+  id: string;
+}
+
+const {imgPath, heading, category, excerpt, id} = Astro.props
+---
+
+<a href={"project/" + id} class="gridCell">
+  <div class="projectOv pointer">
+    <img src={imgPath} />
+    <h3>{heading}</h3>
+    <h4>{category}</h4>
+    <p>{excerpt}</p>
+  </div>
+</a>

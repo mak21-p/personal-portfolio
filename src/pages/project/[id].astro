@@ -1,16 +1,16 @@
 ---
 import type { GetStaticPaths } from "astro";
 import "../shared.scss"
-import { client } from "../../sanity";
 import type { Result } from "../../types/post.types";
 import imageUrlBuilder from "@sanity/image-url"
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import "./singleProject.scss";
 import {marked} from "marked";
 import HeaderComponent from "../../components/header/header";
-import FooterComponent from "../../components/footer/footer";
+import FooterComponent from "../../components/footer/footer.astro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackspace, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { sanityClient } from "sanity:client";
 
 type pathType = {
 	params: {
@@ -18,7 +18,7 @@ type pathType = {
 	}
 }
 
-export const builder = imageUrlBuilder(client);
+export const builder = imageUrlBuilder(sanityClient);
 
 function urlFor(source: SanityImageSource) {
     return builder.image(source);
@@ -26,7 +26,7 @@ function urlFor(source: SanityImageSource) {
 
 
 export async function getProjects() {
-	 const data = (await client.fetch(`*[_type == "post"]`)) as Result[];
+	 const data = (await sanityClient.fetch(`*[_type == "post"]`)) as Result[];
 	 return data;
 }
 
@@ -39,7 +39,6 @@ export const getStaticPaths = (async () => {
 const { id } = Astro.params;
 
 const thisPost: Result | undefined = data.find((d) => d._id == id);
-
 ---
 <html lang="en">
 	<head>

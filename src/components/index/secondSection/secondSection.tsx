@@ -12,9 +12,9 @@ const SecondSection = () => {
           concepts to reality in the realm of websites and applications.
           Currently, I am a freelance developer for hire.
           <br /> <br />
-          When I'm not working, I like to lift weights at the gym and read books
-          that pique my interest. My favorite genres of books are non-fiction
-          and philosophy.
+          When I'm not working, I like to stay active and read books that pique
+          my interest. My favorite genres of books are non-fiction and
+          philosophy.
         </p>
       </div>
       <div className="section">

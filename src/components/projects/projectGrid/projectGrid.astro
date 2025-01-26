@@ -1,0 +1,33 @@
+---
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import Project from "../project/project.astro";
+import imageUrlBuilder from "@sanity/image-url";
+import { sanityClient } from "sanity:client";
+import type { Result } from "../../../types/post.types";
+import './projectGrid.scss'
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source: SanityImageSource) {
+  return builder.image(source);
+}
+
+const projects = (await sanityClient.fetch(`*[_type == "post"]`)) as Result[];
+
+---
+
+<div class="projectsWrapper">
+  <h1>Projects</h1>
+  <div class="projectGrid">
+    {
+      projects.map((project) => (
+        <Project
+          imgPath={urlFor(project.featured_image.asset).url()}
+          excerpt={project.Excerpt}
+          heading={project.title}
+          category={project.Category}
+          id={project._id}
+        />
+      ))
+    }
+  </div>
+</div>

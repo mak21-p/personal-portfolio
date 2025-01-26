@@ -1,6 +1,7 @@
 import Backend from "./backend";
 import Frontend from "./frontend";
 import Databases from "./databases";
+import OtherFrameworks from "./otherFrameworks";
 
 const StackComponent = () => {
   return (
@@ -9,6 +10,7 @@ const StackComponent = () => {
         <Frontend />
         <Backend />
         <Databases />
+        <OtherFrameworks />
       </div>
       <div className="section textSection">
         <h2>Tech Stack</h2>
