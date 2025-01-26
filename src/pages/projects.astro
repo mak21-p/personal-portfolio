@@ -1,27 +1,31 @@
 ---
-import "./shared.scss"
+import "./shared.scss";
 import ProjectGrid from "../components/projects/projectGrid/projectGrid.astro";
-import HeaderComponent from "../components/header/header";
+import HeaderComponent from "../components/header/header.astro";
 import FooterComponent from "../components/footer/footer.astro";
-
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <HeaderComponent />
-		<ProjectGrid />
-		<FooterComponent />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="I'm Maqsood Ali Khan, a skilled full-stack web developer specializing in modern technologies like NodeJS, React, Angular, ElectronJS and more. Explore my portfolio to see innovative projects and solutions tailored for the web and beyond."
+    />
+    <title>Maqsood's Projects</title>
+  </head>
+  <body>
+    <HeaderComponent />
+    <ProjectGrid />
+    <FooterComponent />
+  </body>
 </html>
 
 <style>
-	html,
+  html,
   body,
   #root {
     width: 100%;
